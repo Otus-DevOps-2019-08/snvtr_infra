@@ -1,8 +1,8 @@
 output "app_external_ip" {
-  value = "${google_compute_instance.app.network_interface[0].access_config[0].nat_ip}"
+  value = "${google_compute_instance.app[*].network_interface[0].access_config[0].nat_ip}"
 }
 
 # для самопроверки:
-#output "app_internal_ip" {
-#  value = "${google_compute_instance.app.network_interface[0].network_ip}"
-#}
+output "app_internal_ip" {
+  value = "${google_compute_instance.app[*].network_interface[0].network_ip}"
+}
