@@ -11,7 +11,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "app" {
-  count = 2
+  count = 1
   name         = "reddit-app-${count.index}"
   machine_type = "f1-micro"
   zone         = var.zone
