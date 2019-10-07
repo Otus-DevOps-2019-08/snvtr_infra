@@ -2,6 +2,10 @@ variable project {
   description = "project ID"
 }
 
+variable environment {
+  description = "Environment: staging/prod"
+}
+
 variable region {
   description = "Region"
   default     = "europe-west1"
