@@ -37,7 +37,7 @@ resource "google_compute_instance" "app" {
   }
 
   provisioner "remote-exec" {
-    script = "../files/deploy_app.sh ${var.db_internal_ip}"
+    script = "../files/deploy_app.sh"
   }
 
 }

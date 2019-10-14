@@ -2,7 +2,7 @@
 #set -e
 
 APP_DIR=${1:-$HOME}
-DATABASE_URL=$1:27017
+# DATABASE_URL=$1:27017
 
 git clone -b monolith https://github.com/express42/reddit.git $APP_DIR/reddit
 cd $APP_DIR/reddit
