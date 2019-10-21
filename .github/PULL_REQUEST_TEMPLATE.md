@@ -12,7 +12,7 @@
 
 ## Как запустить проект:
  - terraform apply для stage или prod окружения, потом применение всяких команд ансибла
- - packer с использованием ansible (packer/build-db-app-ansible.sh) - сделан отд файл с переменными variables-ansible.json
+ - packer с использованием ansible (packer/build-db-app-ansible.sh) - старые файлы переименованы в *-script.*
 
 ## Как проверить работоспособность:
  - выполнить команды из ДЗ
