@@ -1,0 +1,13 @@
+{
+  "project_id": "lofty-hybrid-253308",
+  "image_app_name": "reddit-app-ansible",
+  "image_db_name": "reddit-db-ansible",
+  "image_app_family": "reddit-app-ansible",
+  "image_db_family": "reddit-db-ansible",
+  "machine_type": "f1-micro",
+  "source_image_family": "ubuntu-1604-lts",
+  "zone": "europe-west1-b",
+  "network": "default",
+  "disk_size": "10",
+  "disk_type": "pd-standard"
+}

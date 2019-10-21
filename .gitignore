@@ -5,4 +5,4 @@ variables-i.json
 *.tfstate.backup
 *.tfvars
 .terraform/
-
+*.retry

@@ -1,0 +1,31 @@
+---
+- name: Init DB
+  hosts: all
+  become: true
+  gather_facts: no
+
+  tasks:
+  - name: Install python-apt
+    command: "apt install -y python-apt"
+
+  - name: app apt key
+    apt_key:
+      id: EA312927
+      keyserver: keyserver.ubuntu.com
+
+# because the key does not work: trusted=yes
+  - name: add mongod repo
+    apt_repository:
+      repo: deb [ trusted=yes ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse
+      state: present
+
+  - name: install mongod
+    apt:
+      name: mongodb-org
+      state: present
+
+  - name: enable mongod
+    systemd:
+      name: mongod
+      enabled: yes
+
