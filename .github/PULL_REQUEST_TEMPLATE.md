@@ -1,22 +1,23 @@
-# Выполнено ДЗ №9
+# Homework #10
 
- - [+] Основное ДЗ
- - [-] Задание со *
+ - [+] Regular homework
+ - [-] Additional homework *
 
-## В процессе сделано:
- - провижнинг вынесен из терраформа в плейбуки ансибла
- - написан единый плейбук ansible для запуска приложения на двух задеплоеных машинах в gcp
- - плейбук модифицирован под разные теги/хосты
- - плейбук разбит на три отдельных плейбука для установки приложения и его запуска
- - созданы плейбуки-провижнеры для пакера (packer_*.yml)
+## In the homework these tasks have been implemented:
+  (sorry for english, friggin' Ubuntu does not switch layouts well via xrdp)
+  - ansible environments implemented
+  - ansible roles implemented
+  - (created a firewall rule for http port, but I commented it out since there is already a default http rule in GCP)
+  - community role jdauphant.nginx was tried out bit it seems really messy - I don't like it
+  - ansible vault used to create more users
 
-## Как запустить проект:
- - terraform apply для stage или prod окружения, потом применение всяких команд ансибла
- - packer с использованием ansible (packer/build-db-app-ansible.sh) - старые файлы переименованы в *-script.*
+## How to launch the project:
+ - terraform apply for stage/prod environment
+ - run your ansible commands
 
-## Как проверить работоспособность:
- - выполнить команды из ДЗ
+## How to check if the project works:
+ - after applying commands check accessibility of the site using external ip from terraform outputs
 
 ## PR checklist
- - [+] Выставил label с номером домашнего задания
- - [+] Выставил label с темой домашнего задания
+ - [+] homework task label
+ - [+] homework number label

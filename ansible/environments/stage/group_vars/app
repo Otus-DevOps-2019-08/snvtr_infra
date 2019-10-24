@@ -1,0 +1,9 @@
+db_host: 10.132.15.209
+ansible_selinux: disabled
+nginx_sites:
+  defaults:
+    - listen 80
+    - server_name "default"
+    - location / {
+        proxy_pass http://127.0.0.1:9191;
+      }
