@@ -1,0 +1,22 @@
+---
+- name: Init App
+  hosts: all
+  become: true
+  gather_facts: no
+
+  tasks:
+    - name: apt update
+      command: "apt-get update"
+      ignore_errors: yes
+
+    - name: Install python-apt
+      command: "apt-get install -y python-apt"
+      ignore_errors: yes
+
+    - name: Install ruby-full, ruby-bundler, build-essential
+      apt:
+        name: ["ruby-full", "ruby-bundler", "build-essential"]
+        state: present
+        update_cache: yes
+      ignore_errors: yes
+
